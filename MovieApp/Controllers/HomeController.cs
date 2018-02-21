@@ -9,9 +9,14 @@ namespace MovieApp.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        private MoviesDBEntities _db = new MoviesDBEntities();
+
         public ActionResult Index()
+
         {
-            return View();
+
+            return View(_db.MovieSet.ToList());
+
         }
 
         // GET: Home/Details/5
