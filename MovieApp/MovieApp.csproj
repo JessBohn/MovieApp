@@ -148,13 +148,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Movies.cs">
+      <DependentUpon>MoviesDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MoviesDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MoviesDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MoviesDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MoviesDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MoviesDBModel.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -177,6 +186,12 @@
     <Content Include="Models\MoviesDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MoviesDBModel.Context.cs</LastGenOutput>
+      <DependentUpon>MoviesDBModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\MoviesDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MoviesDBModel.edmx</DependentUpon>
+      <LastGenOutput>MoviesDBModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -187,9 +202,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MoviesDBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\MoviesDBModel.edmx.diagram">
+    <Content Include="Models\MoviesDBModel.edmx.diagram">
       <DependentUpon>MoviesDBModel.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -214,7 +229,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
