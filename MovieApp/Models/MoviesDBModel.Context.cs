@@ -25,6 +25,6 @@ namespace MovieApp.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Movies> Movies { get; set; }
+        public DbSet<Movie> Movies { get; set; }
     }
 }
