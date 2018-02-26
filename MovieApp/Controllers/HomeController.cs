@@ -79,7 +79,7 @@ namespace MovieApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Title,Director,DateReleased")] Movie movie)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,Title,Director,DateReleased")] Movie movie)
         {
             if (ModelState.IsValid)
             {
